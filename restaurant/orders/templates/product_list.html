@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <ul>
+        {% for product in products %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_order' %}">Place an Order</a>
+</body>
+</html>
